@@ -1,0 +1,93 @@
+<div nz-row>
+
+  <div nz-col [nzSpan]="24" class="mb-3">
+    <div nz-row nzJustify="space-evenly">
+      @for (item of imgList; track $index) {
+      <div nz-col nzXs="22" nzSm="7" nzMd="7" nzLg="7" nzXl="7" class="align-self-center">
+        <img [src]="item?.img" [alt]="item?.name" class="w-100 mb-3" height="280">
+      </div>
+      }
+    </div>
+  </div>
+
+
+  <div nz-col [nzSpan]="24" class="bg-c-bluemedio">
+    <div nz-row nzJustify="center" class="my-3">
+      <div nz-col nzXs="20" nzSm="11" nzMd="10" nzLg="9" nzXl="7" class="align-self-center">
+        <p class="m-0 text-center">
+          <span class="c-black h4 m-0 fw-400 font">PARA OCASIONES ÚNICAS PEDIDOS ESPECIALES</span>
+          <br>
+          <img src="assets/img/wine.png" alt="wine" class="my-1" height="160">
+        </p>
+      </div>
+      <div nz-col nzXs="20" nzSm="11" nzMd="10" nzLg="9" nzXl="7" class="p-2">
+        <form nz-form [formGroup]="form" class="w-100">
+          <div nz-row class="bg-c-white p-3 bordeBtn">
+
+            <div nz-col [nzSpan]="24">
+              <nz-form-item>
+                <nz-form-control [nzErrorTip]="nameError">
+                  <input nz-input type="text" formControlName="name" placeholder="Nombre" autocomplete="off" />
+
+                  <ng-template #nameError let-control>
+                    <ng-container *ngIf="control.hasError('minlength')">Minimo 3 caracteres</ng-container>
+                    <ng-container *ngIf="control.hasError('maxlength')">Máximo 255 caracteres</ng-container>
+                    <ng-container *ngIf="control.hasError('required')">Introduzca su nombre</ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+
+            <div nz-col [nzSpan]="24">
+              <nz-form-item>
+                <nz-form-control [nzErrorTip]="phoneError">
+                  <input nz-input type="number" formControlName="phone" placeholder="Teléfono" autocomplete="off" />
+
+                  <ng-template #phoneError let-control>
+                    <ng-container *ngIf="control.hasError('required')">Introduzca su teléfono</ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+
+            <div nz-col [nzSpan]="24">
+              <nz-form-item>
+                <nz-form-control [nzErrorTip]="emailError">
+                  <input nz-input type="email" formControlName="email" placeholder="Correo" autocomplete="off">
+
+                  <ng-template #emailError let-control>
+                    <ng-container *ngIf="control.hasError('email')">Correo es invalido</ng-container>
+                    <ng-container *ngIf="control.hasError('required')">Introduzca su correo</ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+
+            <div nz-col [nzSpan]="24">
+              <nz-form-item>
+                <nz-form-control [nzErrorTip]="messageError">
+                  <textarea nz-input type="text" formControlName="message" placeholder="Mensaje" autocomplete="off">
+                    </textarea>
+
+                  <ng-template #messageError let-control>
+                    <ng-container *ngIf="control.hasError('minlength')">Mínimo 3 caracteres</ng-container>
+                    <ng-container *ngIf="control.hasError('maxlength')">Máximo 255 caracteres</ng-container>
+                    <ng-container *ngIf="control.hasError('required')">Introduzca su mensaje</ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+
+            <div nz-col [nzSpan]="24" class="mt-2 text-center">
+              <button nz-button nzType="primary" class="colorBtn bordeBtn h-100 w-50" (click)="submit()">
+                <span class="c-white h6 m-0 fw-600">Enviar</span>
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

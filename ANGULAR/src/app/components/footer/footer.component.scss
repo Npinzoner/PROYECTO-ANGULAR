@@ -1,0 +1,8 @@
+.size {
+  padding: 4px;
+}
+
+:host ::ng-deep .ant-affix {
+  background: var(--blueoscuro) !important;
+  width: 100% !important;
+}

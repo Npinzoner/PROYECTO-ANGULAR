@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #1890ff;
+  --accent: #339ce9;
+  --danger: #ff603b;
+  --blue: #1d5bdf;
+  --black: #0f0f0f;
+  --blackoscuro: #000000;
+  --success: #198754;
+  --red: #ff0000;
+  --white: #ffffff;
+  --gray: #808080;
+  --blueoscuro: #275275;
+  --bluemedio: #97C8F082;
+}
+
+.bg-c-white {
+  background-color: var(--white) !important;
+}
+
+.bg-c-blueoscuro {
+  background-color: var(--blueoscuro) !important;
+}
+
+.bg-c-bluemedio {
+  background-color: var(--bluemedio) !important;
+}
+
+.c-white {
+  color: var(--white) !important;
+}
+
+.c-black {
+  color: var(--black) !important;
+}
+
+/* styles */
+
+.layout {
+  // height: 100vh;
+  min-height: 100vh;
+}
+
+.bordeBtn {
+  border-radius: 3px;
+}
+
+.mano {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .menu_big {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu_small {
+    display: none !important;
+  }
+}
+
+.al {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.txt-large {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.place-c {
+  place-content: space-between;
+}
+
+.fw-400 {
+  font-weight: 400 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.colorBtn {
+  background: var(--blueoscuro) !important;
+  font-size: 14px;
+  font-weight: 700;
+  border-color: transparent !important;
+  --antd-wave-shadow-color: var(--blueoscuro) !important;
+}
+
+.line-none {
+  text-decoration: none;
+}
+
+.rondo {
+  border-radius: 1000px;
+}
+
+.font {
+  font-family: Montserrat;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c1c1c1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #339ce9;
+  border-radius: 10px;
+}

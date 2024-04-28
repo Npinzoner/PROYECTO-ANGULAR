@@ -1,0 +1,61 @@
+<!-- MOVIL -->
+<div nz-row>
+  <div nz-col nzXs="3" nzSm="2" nzMd="0" nzLg="0" nzXl="0" class="menu_small">
+    <button nz-button nzType="text" (click)="this.visible = true" class="h-100 w-100" aria-label="Open menu">
+      <i nz-icon nzType="menu" nzTheme="outline" class="size_icon_peg c-black"></i>
+    </button>
+    <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="left" nzWidth="200px"
+      [nzBodyStyle]="{background:' #ffffff',padding:0}" (nzOnClose)="this.visible = false">
+      <ng-container *nzDrawerContent>
+        <div nz-col class="mb-2">
+          <a class="line-none" [routerLink]="['/']">
+            <img src="assets\img\logo2.png" alt="logo" class="mano w-100" height="100" (click)="this.visible = false">
+          </a>
+        </div>
+        <div nz-row class="place-c h-menu bg-c-white">
+          <div nz-col class="w-100">
+            <ul nz-menu nzTheme="light" nzMode="vertical">
+              @for (item of rutas; track $index) {
+              <a class="line-none" routerLink={{item?.ruta}}>
+                <li nz-menu-item [nzMatchRouter]="true" [nzMatchRouterExact]="true" class="h-100 m-0"
+                  (click)="this.visible = false">
+                  <span class="c-black h6 txt-large fw-600 m-0">{{item?.name | titlecase}}</span>
+                </li>
+              </a>
+              }
+            </ul>
+          </div>
+          <div nz-col>
+            <app-footer type="one"></app-footer>
+          </div>
+        </div>
+      </ng-container>
+    </nz-drawer>
+  </div>
+</div>
+
+<!-- LOGO -->
+<div nz-row>
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="24" class="bg-c-blueoscuro text-center">
+    <a class="line-none" [routerLink]="['/']">
+      <img src="assets\img\logo1.png" alt="logo" class="mano py-3" width="280" height="190">
+    </a>
+  </div>
+</div>
+
+<!-- NO MOVIL -->
+<div nz-row nzJustify="center" class="menu_big">
+  <div nz-col nzXs="0" nzSm="0" nzMd="22" nzLg="16" nzXl="13" class="my-4">
+    <hr class="desing-barra mt-0 mb-1">
+    <ul nz-menu nzTheme="light" nzMode="horizontal" class="d-flex justify-content-center altu al">
+      @for (item of rutas; track $index) {
+      <a class="line-none" routerLink={{item?.ruta}}>
+        <li nz-menu-item [nzMatchRouter]="true" [nzMatchRouterExact]="true" class="m-0">
+          <span class="c-black h6 txt-large m-0 h-100 al fw-400 space font">{{item?.name | uppercase }}</span>
+        </li>
+      </a>
+      }
+    </ul>
+    <hr class="desing-barra mt-1 mb-0">
+  </div>
+</div>

@@ -1,0 +1,61 @@
+[nz-menu-item]:hover {
+  background: var(--whitemedio) !important; //color por defaul
+  border-radius: 0px !important;
+}
+
+.ant-menu.ant-menu-light .ant-menu-item-selected {
+  background: var(--bluemedio) !important;
+  border-radius: 0px !important;
+}
+
+li {
+  padding-right: 0.4rem !important;
+  padding-left: 0.4rem !important;
+}
+
+.h-menu {
+  min-height: calc(100% - 108px);
+}
+
+.altu {
+  height: 30px;
+}
+
+::ng-deep .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-selected::after {
+  border-bottom: 0px !important;
+}
+
+::ng-deep .ant-menu-horizontal>.ant-menu-item::after,
+.ant-menu-horizontal>.ant-menu-submenu::after {
+  border-bottom: 0px !important;
+}
+
+::ng-deep .ant-menu-horizontal {
+  border-bottom: 0px !important;
+}
+
+::ng-deep .ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  border-right: 0px !important;
+}
+
+.desing-barra {
+  height: 1px;
+  color: var(--black);
+}
+
+.space {
+  letter-spacing: 4px;
+}
+
+.size_icon_peg {
+  font-size: 20px;
+}
